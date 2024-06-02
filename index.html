@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta Title, description and keywords for SEO  -->
+    <meta
+      name="title"
+      content="memory card game (game cube memory card) By Vishal Qalandari"
+    />
+    <meta
+      name="description"
+      content="memory card game (game cube memory card) is a game in which you match the pairs and challenge your memory in these memory card games!"
+    />
+    <meta
+      name="keywords"
+      content="memory card game, game cube memory card, memory card games, memory cards game, 
+    memory game cards, Memory game, Card matching, Concentration Game, Puzzle game, Match pairs"
+    />
+
+    <!-- Adding Tab Image  -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./logo/logo4-removebg-preview.png"
+    />
+
+    <!-- Adding Title  -->
+    <title>
+      MCG - Memory Card Game (Match the pairs) | By Vishal Qalandari
+    </title>
+
+    <!-- Google font Link  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Indie+Flower&family=Signika+Negative&family=Teko:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking IonIcons Links  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Linking Css File  -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Linking Js File  -->
+    <script src="script.js" defer></script>
+
+    <!-- Styling for Sound checkbox button  -->
+    <style>
+      .checkbox-wrapper-4 {
+        display: inline-block;
+      }
+      .checkbox-wrapper-4 * {
+        box-sizing: border-box;
+      }
+      .checkbox-wrapper-4 .cbx {
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        padding: 6px 8px;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: all 0.2s ease;
+        display: inline-block;
+      }
+      /* .checkbox-wrapper-4 .cbx:not(:last-child) {
+        margin-right: 6px;
+      } */
+
+      .Mutetext {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .checkbox-wrapper-4 .cbx:hover {
+        background: rgba(0, 119, 255, 0.06);
+      }
+      .checkbox-wrapper-4 .cbx span {
+        float: left;
+        vertical-align: middle;
+        transform: translate3d(0, 0, 0);
+      }
+      .checkbox-wrapper-4 .cbx span:first-child {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        transform: scale(1);
+        border: 1px solid #cccfdb;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+      }
+      .checkbox-wrapper-4 .cbx span:first-child svg {
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 16px;
+        stroke-dashoffset: 16px;
+        transition: all 0.3s ease;
+        transition-delay: 0.1s;
+        transform: translate3d(0, 0, 0);
+      }
+      .checkbox-wrapper-4 .cbx span:last-child {
+        padding-left: 8px;
+        line-height: 18px;
+      }
+      .checkbox-wrapper-4 .cbx:hover span:first-child {
+        border-color: #07f;
+      }
+      .checkbox-wrapper-4 .inp-cbx {
+        position: absolute;
+        visibility: hidden;
+      }
+      .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+        background: #07f;
+        border-color: #07f;
+        animation: wave-4 0.4s ease;
+      }
+      .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
+        stroke-dashoffset: 0;
+      }
+      .checkbox-wrapper-4 .inline-svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        user-select: none;
+      }
+      @media screen and (max-width: 640px) {
+        .checkbox-wrapper-4 .cbx {
+          width: 100%;
+          display: inline-block;
+        }
+      }
+      @-moz-keyframes wave-4 {
+        50% {
+          transform: scale(0.9);
+        }
+      }
+      @-webkit-keyframes wave-4 {
+        50% {
+          transform: scale(0.9);
+        }
+      }
+      @-o-keyframes wave-4 {
+        50% {
+          transform: scale(0.9);
+        }
+      }
+      @keyframes wave-4 {
+        50% {
+          transform: scale(0.9);
+        }
+      }
+
+      /* .Mutetext {
+        font-size: 15px;
+      }
+      .setting-icon {
+        position: relative;
+        top: -2px;
+        font-size: 25px;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- container  -->
+    <div class="container">
+      <div class="inner-container">
+        <!-- Game Container  -->
+        <div class="game-container front-container">
+          <div class="three-dots">
+            <!-- <input type="checkbox" name="" class="muteInput" id="muteInput"><label for="muteInput" class="muteLabel"> Mute Sounds </label> -->
+            <div class="checkbox-wrapper-4">
+              <input class="inp-cbx" id="muteInput" type="checkbox" />
+              <label class="cbx" for="muteInput"
+                ><span>
+                  <svg width="12px" height="10px">
+                    <use xlink:href="#check-4"></use></svg></span
+                ><span class="Mutetext">Mute Sounds</span></label
+              >
+              <svg class="inline-svg">
+                <symbol id="check-4" viewbox="0 0 12 10">
+                  <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </symbol>
+              </svg>
+            </div>
+
+            <!-- <ion-icon
+              class="icon setting-icon game-not-started"
+              name="settings-outline"
+              title="🖥 Go To SETTING"
+            ></ion-icon> -->
+          </div>
+          <div class="game">
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flip-box">
+              <div class="inner-box">
+                <div class="front-side">?</div>
+                <div class="back-side">
+                  <div class="img"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <div class="time">
+              <p>Time: <span class="time-left">30</span>s</p>
+            </div>
+            <div class="flips">
+              <p>Flips: <span class="number-of-flips-done"></span></p>
+            </div>
+            <div class="refresh">
+              <button class="refresh-btn">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Setting Container  -->
+        <!-- <div class="setting-container back-container nothing"> -->
+        <!-- <div class="three-dots close-three-dots">
+            <ion-icon
+              name="close-circle-outline"
+              class="setting-icon icon close-icon"
+              style="font-size: 30px"
+            ></ion-icon>
+          </div> -->
+
+        <!-- <div class="nothing">
+            <div class="nothing-inner-box">
+              <ion-icon
+                class="nothing-setting-icon"
+                name="settings-outline"
+                title="🖥 Go To SETTING"
+              ></ion-icon>
+              <p>
+                Coming Soon... <br />
+                <span>(In the Upgraded Version)</span>
+              </p>
+            </div>
+          </div> -->
+        <!-- <div class="setting"></div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <!-- Messages Box  -->
+    <div class="messages">Your Timer 🕐 will start when you start playing</div>
+  </body>
+</html>
