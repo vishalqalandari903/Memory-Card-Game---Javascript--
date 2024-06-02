@@ -148,7 +148,6 @@ Array.from(cards).forEach((card) => {
 
 // Refreshing game when refresh btn is clicked
 refreshBtn.addEventListener("click", refresh);
-// Hello
 // Shuffling classes when refresh button is clicked
 refreshBtn.addEventListener("click", function () {
   setTimeout(() => {
