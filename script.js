@@ -18,9 +18,9 @@ let timeLeft = document.querySelector(".time-left");
 let muteInput = document.querySelector("#muteInput");
 
 // Html Icons cards
-let settingIcon = document.querySelectorAll(`.three-dots .setting-icon`);
-let playIcon = document.querySelector(`.three-dots .play-icon`);
-let pauseIcon = document.querySelector(`.three-dots .pause-icon`);
+// let settingIcon = document.querySelectorAll(`.three-dots .setting-icon`);
+// let playIcon = document.querySelector(`.three-dots .play-icon`);
+// let pauseIcon = document.querySelector(`.three-dots .pause-icon`);
 
 // Important Variables used later
 let TotalTimeForGame = 30;
@@ -197,8 +197,8 @@ function refresh() {
   clearInterval(start_timer);
   messageBox.classList.remove("go");
 
-  Array.from(settingIcon)[0].classList.add("game-not-started");
-  Array.from(settingIcon)[0].style.cursor = "pointer";
+  // Array.from(settingIcon)[0].classList.add("game-not-started");
+  // Array.from(settingIcon)[0].style.cursor = "pointer";
 }
 
 // Javascript to shuffle array of numbers
@@ -280,23 +280,23 @@ function startTimer() {
   }, 1000);
 }
 
-Array.from(settingIcon).forEach((card) => {
-  card.addEventListener("click", function () {
-    if (Array.from(settingIcon)[0].classList.contains(`game-not-started`)) {
-      document.querySelector(".inner-container").classList.toggle("flipped");
-    } else {
-      messageBox.innerHTML = `You can't go to setting While Playing the game, Either Reset or Complete the game first`;
-      messageBox.classList.remove("go");
-    }
+// Array.from(settingIcon).forEach((card) => {
+//   card.addEventListener("click", function () {
+//     if (Array.from(settingIcon)[0].classList.contains(`game-not-started`)) {
+//       document.querySelector(".inner-container").classList.toggle("flipped");
+//     } else {
+//       messageBox.innerHTML = `You can't go to setting While Playing the game, Either Reset or Complete the game first`;
+//       messageBox.classList.remove("go");
+//     }
 
-    let settingInSettingContainer = settingContainer.querySelector(".setting");
-    let NothingInSettingContainer = settingContainer.querySelector(".nothing");
-    // if(settingInSettingContainer){
-    //   console.log("yes");
+//     let settingInSettingContainer = settingContainer.querySelector(".setting");
+//     let NothingInSettingContainer = settingContainer.querySelector(".nothing");
+//     // if(settingInSettingContainer){
+//     //   console.log("yes");
 
-    // }
-  });
-});
+//     // }
+//   });
+// });
 
 // Function to play game
 // function playGame(){
