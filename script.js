@@ -195,6 +195,7 @@ function refresh() {
   AllSounds("pause");
   if (!muteAllSounds) {
     musicSound.play();
+    AllSounds("play");
   }
 }
 
