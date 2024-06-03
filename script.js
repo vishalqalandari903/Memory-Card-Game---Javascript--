@@ -148,20 +148,12 @@ Array.from(cards).forEach((card) => {
 
 // Refreshing game when refresh btn is clicked
 refreshBtn.addEventListener("click", refresh);
-// Shuffling classes when refresh button is clicked
-refreshBtn.addEventListener("click", function () {
-  setTimeout(() => {
-    ShuffleClasses();
-  }, 300);
-});
 
 // Javascript for refresh function
 function refresh() {
-  AllSounds("pause");
-  if (!muteAllSounds) {
-    musicSound.play();
-  }
-
+  setTimeout(() => {
+    ShuffleClasses();
+  }, 300);
   // Adding Auto to pointer events to all boxes
   Array.from(cards).forEach((card) => {
     card.style.pointerEvents = "auto";
@@ -199,6 +191,11 @@ function refresh() {
 
   // Array.from(settingIcon)[0].classList.add("game-not-started");
   // Array.from(settingIcon)[0].style.cursor = "pointer";
+
+  AllSounds("pause");
+  if (!muteAllSounds) {
+    musicSound.play();
+  }
 }
 
 // Javascript to shuffle array of numbers
